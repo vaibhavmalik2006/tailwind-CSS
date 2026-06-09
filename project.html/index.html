@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Design - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">TelWindCSS</div>
+            <ul class="flex gap-8">
+                <li><a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome to TelWindCSS</h1>
+            <p class="text-xl mb-8 opacity-90">Build beautiful, responsive web pages with Tailwind CSS</p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                Get Started
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-blue-600 mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Fast & Lightweight</h3>
+                    <p class="text-gray-600">Tailwind CSS provides utility-first CSS that's highly optimized for production.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-green-600 mb-4">🎨</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Customizable</h3>
+                    <p class="text-gray-600">Easily customize colors, spacing, and more to match your brand identity.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-purple-600 mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Responsive</h3>
+                    <p class="text-gray-600">Build responsive designs that work seamlessly on all device sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">About Us</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        TelWindCSS is a modern web design showcase built with the power of Tailwind CSS. 
+                        We believe in creating beautiful, functional interfaces that provide excellent user experiences.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our mission is to help developers build stunning web applications with less code and more productivity.
+                    </p>
+                </div>
+                <div class="bg-blue-600 rounded-lg h-64 flex items-center justify-center">
+                    <span class="text-white text-2xl font-semibold">Visual Content</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-800">Get In Touch</h2>
+            <form class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                <div class="mb-6">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2026 TelWindCSS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
